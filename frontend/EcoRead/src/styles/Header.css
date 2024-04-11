@@ -16,23 +16,25 @@
   align-items: center;
   width: 100%;
   padding: 20px;
-  background-color: #333;
-  color: white;
+  background-color: #fff;
+  color: black;
 }
 
 .logo {
   font-size: 24px;
-  margin-left: -25%;
+  width: 60px;
+  height: 60px;
+  margin-left: -720%;
 
 }
 
 
 .options{
-  margin-left: -10%;
+  margin-left: -30%;
 }
 .options a {
   /* margin-left: 20px; */
-  color: white;
+  color: black;
   text-decoration: none;
   /* padding: 110px; */
   margin: 140px;
@@ -55,17 +57,18 @@
 .search-bar input {
   width: 200px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid white;
   border-radius: 5px;
   font-size: 16px;
   margin-left: 450%;
-  
+  background-color: white;
+  color: black;
 }
 
 .search-bar button {
   height: 50px;
-  background-color: #333;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: black;
   border: none;
   border-radius: 5px;
   margin-left: 10px;
@@ -73,5 +76,25 @@
 }
 
 .search-bar button:hover {
-  background-color: #555;
+  background-color: grey;
+  color: rgb(223, 223, 223);
+  transition: background-color 0.3s ease;
+  transition: color 0.3 ease;
+}
+
+.search-bar button:active {
+  background-color: rgb(182, 182, 182);
+  background-color: rgb(97, 97, 97); /* Muda a cor de fundo quando o botão é clicado */
+  color: rgb(174, 174, 174); /* Muda a cor do texto */
+  transform: scale(0.98); /* Faz o botão parecer levemente pressionado */
+}
+
+a[href] {
+  color: #333;
+}
+
+a[href]:hover {
+  text-decoration: none; 
+  color: rgb(182, 182, 182);
+  transition: color 0.3s ease;
 }

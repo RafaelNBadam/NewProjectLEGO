@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import './styles/Header.css'; // Arquivo CSS para estilização
+import '../styles/Header.css'; // Arquivo CSS para estilização
+import logo from '../assets/ECOREAD.png'; // Importando a imagem
 
 function Header() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,7 +14,9 @@ function Header() {
     <div className="header-container">
       {/* Cabeçalho com opções */}
       <div className="header">
-        <div className="logo">Logo do Site</div>
+      <a href="/">
+      <img className="logo" src={logo} alt="Logo ECOREAD"/>
+      </a>
         <div className="options">
           <a href="#livro-do-dia">Livro do Dia</a>
           <a href="#todos-os-livros">Todos os Livros</a>

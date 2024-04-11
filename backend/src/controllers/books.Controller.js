@@ -1,14 +1,16 @@
-import { booksModel } from "../models/books.Model.js";
+import Book from '../models/books.Model.js';
 
-const booksAll = async (req, res) => {
+async function booksAll(req, res) {
+  try {
+    const books = await Book.findAll();
+    res.json(books);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Erro ao buscar livros.' });
+  }
+}
 
-  const books = await booksModel.booksAll();
-
-    return res.status(200).json({ message: "controller funcionando" });
-  };
-  
-  // Exportando como parte de um objeto
-  export const booksControllers = {
-    booksAll,
-  };
-  
+export const booksControllers = {
+  booksAll,
+  // Outros controladores...
+};
